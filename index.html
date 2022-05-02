@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Resume Dash</title>
+</head>
+<body>
+   
+    <!-- Home Screen -->
+    <div id="home_screen" >
+        <!-- style="display: none;" -->
+
+        <img id="logo" src="logo.png" alt="logo here">
+
+        <div id="home_content">
+            <h1>Get a Professional resume <span style="font-style: italic;">FAST!</span></h1>
+            <div id="create_button" class="button"><p class="button_text">Create a Resume!</p></div>
+            <div id="continue_button" class="button"><p class="button_text">Continue with existing resume</p></div>
+
+        </div>
+    </div>
+
+    <!-- Main page -->
+    <div id="main_page" style="display: none;">
+        <!-- Header -->
+        <div id="header">
+            <p id="header_logo">RESUME DASH</p>
+            <p class="header_link" id="create" data-value="create_page">Create new</p>
+            <p class="header_link" id="resume" data-value="resume_page">My Resume</p>
+            <p class="header_link" id="jobs" data-value="jobs_page">Jobs</p>
+        </div>
+
+        <!-- Create Resume -->
+        <div id="create_page" class="page" style="display: none;">
+            <div id="create_body">
+                <!-- Contact Info -->
+                <div id="contact_info" >
+                    <h1 class="title">Contact Information</h1>
+                    <div class="fields">
+                        <p class="label">First Name</p>
+                        <input id="first_name" type="text">
+
+                        <p class="label">Last Name</p>
+                        <input id="last_name" type="text">
+
+                        <p class="label">Address</p>
+                        <input id="address" type="text">
+
+                        <p class="label">E-Mail</p>
+                        <input id="email" type="email">
+                    </div>
+                </div>
+                <!-- img -->
+                <div class="pic">
+                    <img class="image" src="contact_pic2.png">
+                </div>
+            </div>
+            <div id="contact_next" class="button next_button"><p class="button_text">NEXT</p></div>
+        </div>
+
+        <!-- Experience -->
+        <div id="experience_page" class="page" style="display: none;">
+            <div id="experience_body">
+                <!-- div -left -->
+                <div id="work_exp">
+                    <h1 class="title">Work Experience</h1>
+                    <div class="fields list_input">
+                        <div>
+                            <p class="label">Company Name</p>
+                            <input id="new_job_name" type="text">
+                        </div>
+                        <!-- START DATE -->
+                        <div>
+                            <p class="label"><span class="upper_label">Start</span><br>Month</p>
+                            <select id="start_month">
+                                <option value="">----</option>
+                                <option value="Jan">January</option>
+                                <option value="Feb">February</option>
+                                <option value="Mar">March</option>
+                                <option value="Apr">April</option>
+                                <option value="May">May</option>
+                                <option value="Jun">June</option>
+                                <option value="Jul">July</option>
+                                <option value="Aug">August</option>
+                                <option value="Sep">September</option>
+                                <option value="Oct">October</option>
+                                <option value="Nov">November</option>
+                                <option value="Dec">December</option>
+                              </select>
+                        </div>
+
+                        <div>
+                            <p class="label">Year</p>
+                            <select id="start_year" class="year_selector">
+                                <option value="">----</option>
+                              </select>
+                        </div>
+
+                        <!-- END DATE -->
+                        <div>
+                            <p class="label"><span class="upper_label">End</span><br>Month</p>
+                            <select id="end_month">
+                                <option value="">----</option>
+                                <option value="Jan">January</option>
+                                <option value="Feb">February</option>
+                                <option value="Mar">March</option>
+                                <option value="Apr">April</option>
+                                <option value="May">May</option>
+                                <option value="Jun">June</option>
+                                <option value="Jul">July</option>
+                                <option value="Aug">August</option>
+                                <option value="Sep">September</option>
+                                <option value="Oct">October</option>
+                                <option value="Nov">November</option>
+                                <option value="Dec">December</option>
+                              </select>
+                        </div>
+
+                        <div>
+                            <p class="label">Year</p>
+                            <select id="end_year" class="year_selector">
+                                <option value="">----</option>
+                              </select>
+                        </div>
+                        <!-- <p class="label">E-Mail</p>
+                        <input type="email"> -->
+                        <div id="add_work" class="add_button"> + </div>
+                    </div>
+                </div>
+
+                <!-- SKILLS LIST -->
+                <div id="skill_list">
+                    <p class="upper_label">Skills</p>
+
+                    <input class="skill" type="text">
+                    <input class="skill" type="text">
+                    <input class="skill" type="text">
+                    <input class="skill" type="text">
+                </div>
+            </div>
+            <div id="experience_next" class="button next_button"><p class="button_text">NEXT</p></div>
+        </div>
+
+         <!-- EDUCATION -->
+         <div id="education_page" class="page" style="display: none;">
+            <div id="education_body">
+                <!-- div -left -->
+                <div id="edu">
+                    <h1 class="title">Education</h1>
+                    <div class="fields list_input">
+                        <div>
+                            <p class="label">School Name</p>
+                            <input id="school_name" type="text">
+                        </div>
+                        <!-- GRAD DATE -->
+                        <div>
+                            <p class="label">Month</p>
+                            <select id="grad_month">
+                                <option value="">----</option>
+                                <option value="Jan">January</option>
+                                <option value="Feb">February</option>
+                                <option value="Mar">March</option>
+                                <option value="Apr">April</option>
+                                <option value="May">May</option>
+                                <option value="Jun">June</option>
+                                <option value="Jul">July</option>
+                                <option value="Aug">August</option>
+                                <option value="Sep">September</option>
+                                <option value="Oct">October</option>
+                                <option value="Nov">November</option>
+                                <option value="Dec">December</option>
+                              </select>
+                        </div>
+
+                        <div>
+                            <p class="label">Year</p>
+                            <select id="grad_year" class="year_selector">
+                                <option value="">----</option>
+                              </select>
+                        </div>
+
+                        <!-- <p class="label">E-Mail</p>
+                        <input type="email"> -->
+                        <div id="add_work" class="add_button"> + </div>
+                    </div>
+                </div>
+
+                <!-- image -->
+                <div id="edu_pic_div">
+                    <img id="edu_pic" src="di.png" alt="">
+                </div>
+            </div>
+            <div id="education_next" class="button next_button"><p class="button_text">NEXT</p></div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div id="summary_page" class="page" style="display: none;">
+            <div id="education_body">
+                <!-- div -left -->
+                <div id="edu">
+                    <h1 class="title">Summary</h1>
+                    <div class="fields list_input">
+                        <div>
+                            <p class="label">Write a short summary about yourself</p>
+                            <textarea name="" id="summary" cols="119" rows="19"></textarea>
+                        </div>
+                        
+
+                        <!-- image -->
+                        <div id="edu_pic_div">
+                            <img id="summary_pic" src="logo_pic.png" alt="">
+                        </div>
+                    </div>
+                    <div id="summary_next" class="button next_button"><p class="button_text">NEXT</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUME PAGE -->
+        <div id="resume_page" class="page" style="display: none;">
+            <div id="resume_body">
+                <div id="left_div">
+
+                </div>
+                
+                <div id="resume_div">
+
+                    <div id="top">
+                        <p id="name">First Name</p>
+                        <p >Address</p>
+                    </div>
+
+                    <div id="bottom">
+
+                        <div id="left">
+                            <p class="italic">
+                                " This is where your summary will go.
+                                (ie. who you are and what yor about) "
+                            </p>
+                            <p>Contact Info: email@email.com</p>
+                        </div>
+                        <div id="right">
+
+                            <p class="res_title">Work History</p>
+                            <p style="margin-bottom: 0px;"></p>
+                            <ul id="res_skills">
+                                
+                            </ul>
+
+                            <p class="res_title">Education</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="color_picker_div">
+                    <p class="label">Choose color</p>
+                    <input id="color_picker" type="color">
+
+                    <button style="justify-self: flex-start;">Style 1</button>
+                    <button>Style 2</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOBS PAGE -->
+        <div id="jobs_page" class="page" style="display: none;">
+
+            <h1 class="title">Jobs</h1>
+        
+            <div class="job_container">
+                <img src="zip_logo.webp" alt="">
+            </div>
+
+            <div class="job_container">
+                
+                <img id="a_logo" src="a_logo.png" alt="">
+
+                <div id='job_data_div'>
+
+                    <!-- <div class="job">
+                        <img class="job_logo" src="a_logo.png" alt="">
+
+                        <p class="bold">Comapny Name</p>
+                        <p>Job Tutkle</p>
+                    </div> -->
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+<script src="main.js"></script>
+</body>
+</html>
